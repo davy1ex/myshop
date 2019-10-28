@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- если есть титульник -->
+    {% if title %} $ 
+        <title>{{ title }}</title>
+    {% else %}
+        <title>myshop</title>
+    {% endif %}
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    
+    {% block head_css %}
+    {% endblock %}
+
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="mainmenu">
+                <ul>                
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/admin/product/product">Products</a></li>
+                    <li><a href="/admin/product/product/add">Add Products</a></li>
+                </ul>
+            </div>
+            
+            
+            <div class="usermenu">
+                <ul>
+                    {% if user %}
+                        <strong>{{ user }}</strong>
+                        <li><a href="">Setting</a></li>
+                        <li><a href="{% url 'logout' %}">LogOut</a></li>
+                    {% else %}
+                        <li><a href="">LogIn</a></li>
+                    {% endif %}                    
+                </ul>
+            </div>
+                
+            
+        </div>
+    </header>
+    <div class="body_wrapper">
+
+        {% block body %}
+        {% endblock %}
+    </div>
+</body>
+</html>

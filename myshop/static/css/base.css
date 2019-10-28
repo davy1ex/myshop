@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: 50px;
+}
+
+.wrapper div {
+    margin: auto;
+}
+
+header .wrapper {
+    width: 70%;
+    margin: 10px auto;
+
+}
+
+header ul {
+    list-style: none;
+    text-align: center;
+}
+
+header li {
+    display: inline;
+    text-align: center;    
+}
+
+header li a {
+    color: black;
+}
+
+header li a:visited {
+    color: black;
+}
+
+.mainmenu {
+    /* float: left; */
+}
+
+.usermenu {
+    /* float: right; */
+}
+
+.body_wrapper {
+    width: 60%;
+    margin: 0 auto;
+}

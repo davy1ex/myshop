@@ -1,0 +1,13 @@
+.items_cell {
+    display: flex;
+    flex-direction: row;
+}
+
+.item {
+    /* display: fle */
+    flex: 0 1 auto;
+    width: 30%;
+    margin: 5px;
+
+    border: 1px solid black;
+}

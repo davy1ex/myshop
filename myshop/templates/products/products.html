@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block head_css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/product/products.css' %}">
+{% endblock %}
+
+{% block body %}
+Choose your product
+    <div class="items_cell">        
+        {% for product in product_list %}
+            <div class="item">
+                <p>{{ product.name }}</p>
+                <!-- <p>{{ product.description }}</p>
+                <p>type: {{ product.type }}</p> -->
+            </div>
+        {% endfor %}  
+    </div>
+    
+{% endblock %}

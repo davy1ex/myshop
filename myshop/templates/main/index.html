@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block body %}
+    лол
+    <a href="{% url "social:begin" "vk-oauth2" %}">vk2</a>
+    {% if user %}
+        hello, {{ user }}
+    {% endif %}
+{% endblock %}
