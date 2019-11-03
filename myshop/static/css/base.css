@@ -37,15 +37,31 @@ header li a:visited {
     color: black;
 }
 
-.mainmenu {
-    /* float: left; */
+.usermenu {
+    margin-left: auto;
 }
 
-.usermenu {
-    /* float: right; */
+.usermenu ul li {
+    display: inline-flex;
+}
+
+.vk-logo {
+    width: 30px;
+}
+
+.vk-logo a {
+    line-height: 35px;
+}
+
+.vk-logo img {
+    width: 30px;
+    padding: auto;
 }
 
 .body_wrapper {
     width: 60%;
     margin: 0 auto;
 }
+
+
+

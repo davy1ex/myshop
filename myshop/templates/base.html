@@ -39,6 +39,14 @@
                         <li><a href="{% url 'logout' %}">LogOut</a></li>
                     {% else %}
                         <li><a href="">LogIn</a></li>
+                        <li>
+                            <div class="vk-logo">
+                                <a href="{% url "social:begin" "vk-oauth2" %}">
+                                    <img src="{% static 'images/vk-logo.png'%}" alt="">
+                                </a>
+                            </div>
+                        </li>
+                        
                     {% endif %}                    
                 </ul>
             </div>

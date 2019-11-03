@@ -1,7 +1,7 @@
 {% extends "base.html" %}
+{% load static %}
 
-{% block head_css %}
-    {% load static %}
+{% block head_css %}    
     <link rel="stylesheet" href="{% static 'css/product/products.css' %}">
 {% endblock %}
 
@@ -11,8 +11,17 @@ Choose your product
         {% for product in product_list %}
             <div class="item">
                 <p>{{ product.name }}</p>
-                <!-- <p>{{ product.description }}</p>
-                <p>type: {{ product.type }}</p> -->
+
+                
+                
+                    {% static "" as path_to_static %}
+                    <img src="/{{ product.photo.name }}" alt="">
+                
+                <br>
+                <p>{{ product.desctiption }}</p>
+                <br>
+                <p>type: {{ product.type_product }}</p>
+
             </div>
         {% endfor %}  
     </div>

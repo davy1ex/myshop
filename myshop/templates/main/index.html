@@ -1,8 +1,16 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block head_css %}
+<link rel="stylesheet" href="{% static 'css/main/index.css' %}">
+{% endblock %}
 
 {% block body %}
-    лол
-    <a href="{% url "social:begin" "vk-oauth2" %}">vk2</a>
+    
+    <div class="logo">
+        <img src="{% static 'images/logo.jpg'%}" alt="">
+    </div>
+    
     {% if user %}
         hello, {{ user }}
     {% endif %}
