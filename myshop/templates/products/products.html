@@ -15,7 +15,7 @@ Choose your product
                 
                 
                     {% static "" as path_to_static %}
-                    <img src="/{{ product.photo.name }}" alt="">
+                    <img src="{{ product.photo.url }}" alt="">
                 
                 <br>
                 <p>{{ product.desctiption }}</p>
