@@ -9,10 +9,3 @@ class Product(models.Model):
     desctiption = models.CharField(max_length=100)
     type_product = models.CharField(max_length=100)
     photo = models.ImageField(upload_to= "product", blank=True)
-
-    # def save(self, *args, **kwargs):
-    #     super(Product, self).save(*args, **kwargs)
-    #     filename = "55.jpg"
-
-    # self.photo.save()
-    # date

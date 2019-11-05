@@ -6,22 +6,30 @@
 {% endblock %}
 
 {% block body %}
-Choose your product
+    <div class="hello-text">
+        Choose your product
+    </div>
     <div class="items_cell">        
         {% for product in product_list %}
             <div class="item">
-                <p>{{ product.name }}</p>
-
-                
-                
-                    {% static "" as path_to_static %}
+                <div class="photo">
                     <img src="{{ product.photo.url }}" alt="">
-                
-                <br>
-                <p>{{ product.desctiption }}</p>
-                <br>
-                <p>type: {{ product.type_product }}</p>
-
+                </div>              
+                <div class="item_info">
+                    <div class="text">
+                        <div class="title">
+                            {{ product.name }}
+                        </div>
+                        <!-- <p>type: {{ product.type_product }}</p> -->
+                        {{ product.desctiption }}                    
+                    </div>
+                    
+                </div>                
+                <div class="buy_container">
+                    <div class="buy_field">
+                        <a href="#"><img src="{% static 'images/shopping_cart.png' %}" alt=""> buy</a>
+                    </div>
+                </div>
             </div>
         {% endfor %}  
     </div>
