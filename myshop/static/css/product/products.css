@@ -43,12 +43,16 @@
     text-align: center;
 }
 
+.text .title {
+    font-weight: bold;
+}
+
 .item .buy_container {
     width: 100%;
     height: auto;
     line-height: 45px;
 
-    margin: 10px 0 ;
+    margin: 10px 0;
     margin-bottom: 0;
 
     background: black;
@@ -66,6 +70,10 @@
 
 .item a:hover {
     color: lightslategray;
+}
+
+.item .price  {
+    margin-top: 10px;
 }
 
 .item .buy_field img {
