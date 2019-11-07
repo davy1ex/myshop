@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'social_django',
 
     'product',
-    'ShopingCart',
+    'shopingCart',
 ]
 
 MIDDLEWARE = [

@@ -10,7 +10,7 @@ from django.conf.urls.static import static
 # from myshop.views import IndexView
 import myshop.views 
 from product.views import ProductsView
-import ShopingCart.views
+import shopingCart.views
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 urlpatterns = [
@@ -20,5 +20,6 @@ urlpatterns = [
     path('products/', ProductsView.as_view(template_name="products/products.html"), name="products"),
     url('', include('social_django.urls', namespace='social')),
     url('logout/', myshop.views.logout_view, name='logout'),
-    url('shoping_cart/', ShopingCart.views.main, name='main')
+    url('shoping_cart/main/', shopingCart.views.ShopingCartView.as_view(template_name="shoping_cart/shoping_cart.html"), name="shoping_cart"),
+    path('shoping_cart/add_<int:product_id>/', shopingCart.views.add_to_shoping_cart),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
