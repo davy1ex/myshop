@@ -10,7 +10,6 @@ class ShopingCartView(generic.ListView):
 
     def get_queryset(self):
         list_product_ids = ShopingCart.objects.get(id=1).get_list_product_ids()
-        print(list_product_ids)
         product_list = []
         for product_id in list_product_ids:
             product_list.append(Product.objects.get(id=product_id))
