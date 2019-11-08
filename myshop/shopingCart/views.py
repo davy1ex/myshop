@@ -17,7 +17,11 @@ class ShopingCartView(generic.ListView):
         return product_list
 
 
-def add_to_shoping_cart(request, product_id):
+def add_product(request, product_id):
     ShopingCart.objects.get(id=1).add_product_id(product_id)
     return redirect('/products')
-    # return HttpResponse("lel")
+
+
+def remove_product(request, product_id):
+    ShopingCart.objects.get(id=1).delete_product_id(product_id)
+    return redirect("/shoping_cart/main")

@@ -1,7 +1,7 @@
 {% block body %}
 лол
-{% for p in buyed_product_list %}
-    <p>{{ p.name }}</p>
+{% for product in buyed_product_list %}
+    <p>{{ product.name }} <a href="/shoping_cart/remove_{{ product.id }}">delete</a></p>
 {% endfor %}
 
 

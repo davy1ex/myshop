@@ -21,5 +21,6 @@ urlpatterns = [
     url('', include('social_django.urls', namespace='social')),
     url('logout/', myshop.views.logout_view, name='logout'),
     url('shoping_cart/main/', shopingCart.views.ShopingCartView.as_view(template_name="shoping_cart/shoping_cart.html"), name="shoping_cart"),
-    path('shoping_cart/add_<int:product_id>/', shopingCart.views.add_to_shoping_cart),
+    path('shoping_cart/add_<int:product_id>/', shopingCart.views.add_product),
+    path('shoping_cart/remove_<int:product_id>/', shopingCart.views.remove_product),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

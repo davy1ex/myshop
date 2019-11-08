@@ -17,6 +17,13 @@ class ShopingCart(models.Model):
         list_product_ids.append(product_id)
         self.json_product_ids = json.dumps({"buyed_product_ids": list_product_ids})
         super().save()
+    
+    def delete_product_id(self, product_id):
+        list_product_ids = self.get_list_product_ids()
+        list_product_ids.remove(product_id)
+        self.json_product_ids = json.dumps({"buyed_product_ids": list_product_ids})
+        super().save()
+
 
 
 
