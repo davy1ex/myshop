@@ -11,14 +11,11 @@
 }
 
 .item {
-    display: inline-block;
-    flex-direction: column;
-    width: 30%;
-    /* height: 350px; */
-    
-    
+    /* display: inline-block; */
+    /* flex-direction: column; */
+    width: 30%;   
     margin: 5px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .item .photo {
@@ -27,53 +24,76 @@
     overflow: hidden;
 }
 
-.item .photo img {
-    
+.item .photo img {    
     width: initial;
     height: 170px;
 }
 
 .item_info {
-    height: 100px;
-    /* max-height: 200px; */
+    /* height: 100px; */
+    background: #3E555B
 }
 
 .text {
-    padding: 15% 0;
-    text-align: center;
+    padding: 20px 10px;
 }
 
 .text .title {
-    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.text .description {
+    color: #B9CDD6;
+    padding-top: 5px;
+    font-size: 0.9em;
 }
 
 .item .buy_container {
-    width: 100%;
-    height: auto;
-    line-height: 45px;
+    width: 90%;
+    margin: 0 auto;
+    background: transparent;
 
-    margin: 10px 0;
-    margin-bottom: 0;
-
-    background: black;
-    color: white;
-} 
-
-.item .buy_field {
-    text-align: center;
 }
 
+.item .buy_field {
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    border-radius: 100px;
+
+    background: #4CC695;
+
+    text-align: center;
+    
+    margin-left: auto;
+    margin-top: -20px;
+    
+} 
+
 .item a, .item a:visited {
-    color: white;
     text-decoration: none;
 }
 
-.item a:hover {
-    color: lightslategray;
+.item .price-container {
+    width: 250px;
+    background: transparent;
+    margin-left: -20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 
 .item .price  {
-    margin-top: 10px;
+    width: 70px;
+    height: 20px;
+    border-radius: 100px; 
+
+    background: white;
+    color: #2D3A40;
+    
+    line-height: 20px; 
+    font-size: 0.7em;
+    text-align: center;
+    
 }
 
 .item .buy_field img {

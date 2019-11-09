@@ -20,17 +20,22 @@
                         <div class="title">
                             {{ product.name }}
                         </div>
-                        <!-- <p>type: {{ product.type_product }}</p> -->
-                        {{ product.desctiption }}
-                        <div class="price">
-                            {{ product.price }} {{ product.currency }}
+
+                        <div class="description">
+                            {{ product.desctiption }}
+                        </div>
+                        
+                        <div class="price-container">
+                            <div class="price">
+                                {{ product.price }} {{ product.currency }}
+                            </div>
                         </div>
                     </div>
                     
                 </div>      
                 <div class="buy_container">
                     <div class="buy_field">
-                        <a href="/shoping_cart/add_{{ product.id }}"><img src="{% static 'images/shopping_cart.png' %}" alt=""> buy</a>
+                        <a href="/shoping_cart/add_{{ product.id }}"><img src="{% static 'images/shopping_cart.png' %}" alt=""></a>
                     </div>
                 </div>
             </div>

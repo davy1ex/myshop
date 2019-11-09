@@ -1,6 +1,24 @@
 * {
     padding: 0;
     margin: 0;
+    /* background: #20292d; */
+}
+
+body {
+    background: #2D3A40;    
+}
+
+
+a, a:visited {
+    color: white;
+}
+
+a:hover {
+    color: gray;
+}
+
+* {
+    color: white;
 }
 
 .wrapper {
@@ -27,14 +45,6 @@ header ul {
 header li {
     display: inline;
     text-align: center;    
-}
-
-header li a {
-    color: black;
-}
-
-header li a:visited {
-    color: black;
 }
 
 .usermenu {
