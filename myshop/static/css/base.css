@@ -11,6 +11,7 @@ body {
 
 a, a:visited {
     color: white;
+    text-decoration: none;
 }
 
 a:hover {
@@ -22,6 +23,7 @@ a:hover {
 }
 
 .wrapper {
+    line-height: 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: 50px;
@@ -32,27 +34,41 @@ a:hover {
 }
 
 header .wrapper {
-    width: 70%;
+    width: 60%;
+    height: 40px;
     margin: 10px auto;
 
+    background: #3E555B;
+    border-radius: 40px;
 }
 
 header ul {
+    width: 100%;
     list-style: none;
     text-align: center;
+    display: inline-flex;
 }
 
 header li {
-    display: inline;
-    text-align: center;    
+    text-align: center;
+    display: block;
+    width: auto;
+}   
+
+header li:not(:last-child) {
+    margin-right: 20px;
 }
 
 .usermenu {
-    margin-left: auto;
+    margin-left: 10% !important;
 }
 
-.usermenu ul li {
+.usermenu ul {
     display: inline-flex;
+}
+
+.usermenu ul li:not(:last-child) {
+    margin-right: 20px;
 }
 
 .vk-logo {

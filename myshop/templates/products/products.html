@@ -27,7 +27,20 @@
                         
                         <div class="price-container">
                             <div class="price">
-                                {{ product.price }} {{ product.currency }}
+                                {% if product.currence != "" and product.price != "" %}
+                                    <div class="currency">
+                                        {% if product.currency == "USD" %}
+                                            <img src="{% static 'images/usd.png' %}" alt="">
+                                        {% endif %}
+                                    </div>
+                                    <div class="text">
+                                        {{ product.currency }} {{ product.price }}
+                                    </div>
+                                    
+                                {% else %}
+                                    None
+                                {% endif %}
+                                
                             </div>
                         </div>
                     </div>

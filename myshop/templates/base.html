@@ -35,7 +35,7 @@
             <div class="usermenu">
                 <ul>
                     {% if user %}
-                        <strong>{{ user }}</strong>
+                        <li><strong>{{ user }}</strong></li>
                         <li><a href="">Setting</a></li>
                         <li><a href="{% url 'logout' %}">LogOut</a></li>
                     {% else %}
