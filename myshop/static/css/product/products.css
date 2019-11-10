@@ -26,7 +26,8 @@
 }
 
 .item .photo img {    
-    width: initial;
+    /* width: initial; */
+    width: 100%;
     height: 170px;
 }
 
