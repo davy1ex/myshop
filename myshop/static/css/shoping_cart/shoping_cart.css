@@ -1,0 +1,36 @@
+.row {
+    background: darkgray;
+}
+
+.col {
+    border: 1px solid black;
+}
+
+.row .photo img {
+    width: 100px;
+}
+
+.row .quantity_filed button {
+    /* display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: #0069ed;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none; */
+
+    color: black;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 10px;
+    background: #4CC695;
+}

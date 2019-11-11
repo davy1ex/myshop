@@ -1,8 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head_css %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/shoping_cart/shoping_cart.css' %}">
+{% endblock %}
+
 {% block body %}
 лол
 {% for product in buyed_product_list %}
     <p>{{ product.name }} <a href="/shoping_cart/remove_{{ product.id }}">delete</a></p>
 {% endfor %}
+
+<div class="container">
+    {% for product in list_buyed_product %}
+        <div class="row">
+            <div class="col photo">
+                <img src="{{ product.photo.url }}" alt="">
+            </div>
+            
+            <div class="col name">
+                {{ product.name }}
+            </div>
+
+            <div class="col quantity_filed">
+                <button class="minus">-</button>
+                <input type="text">
+                <button class="plus">+</button>
+            </div>
+
+            <div class="col price">
+                {{ product.price }} {{ product.currency}}
+            </div>
+        </div>
+
+
+    {% endfor %}
+</div>
 
 
 {% endblock %}

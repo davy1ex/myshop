@@ -6,7 +6,7 @@ from product.models import Product
 
 class ShopingCartView(generic.ListView):
     template_name = 'shoping_cart.html'
-    context_object_name = 'buyed_product_list'
+    context_object_name = 'list_buyed_product'
 
     def get_queryset(self):
         list_product_ids = ShopingCart.objects.get(id=1).get_list_product_ids()
