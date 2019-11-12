@@ -1,16 +1,38 @@
 .row {
-    background: darkgray;
+    background: #3E555B;
+    border-radius: 5px;
 }
 
-.col {
+.container {
+    width: 70%;
+}
+
+.row:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* .container div {
     border: 1px solid black;
+} */
+
+.checkpoint {
+    margin: auto;
 }
 
-.row .photo img {
-    width: 100px;
+.photo, .price {
+    padding: 0px;
 }
 
-.row .quantity_filed button {
+.photo img {
+    width: 150px;
+}
+
+.name, .price {
+    text-align: center;
+    margin: auto;
+}
+
+button {
     /* display: inline-block;
     border: none;
     padding: 1rem 2rem;
@@ -28,9 +50,43 @@
     -moz-appearance: none; */
 
     color: black;
-    border-radius: 10px;
-    width: 20px;
-    height: 20px;
-    line-height: 10px;
+    border-radius: 100px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
     background: #4CC695;
+    color: white;
+}
+
+ .minus_btn, .plus_btn {
+    color: black;
+    padding: 0;
+    margin: auto;
+    padding: 0 5px;
+}
+
+.delete_btn {
+    margin: auto;
+}
+
+.text_field {
+    margin: auto;    
+}
+
+.text_field input {
+    width: 30px;
+    color: black;
+    border-radius: 0px;
+}
+
+.total_container {
+    background: transparent;
+}
+
+.total {
+    width: auto;
+    margin-left: auto;
+    padding: 10px;
+    background: #3E555B;
+    border-radius: 5px;
 }

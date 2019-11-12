@@ -4,6 +4,10 @@
     /* background: #20292d; */
 }
 
+button {
+    border: none
+}
+
 body {
     background: #2D3A40;    
 }

@@ -1,20 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
 {% block head_css %}
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 <link rel="stylesheet" href="{% static 'css/shoping_cart/shoping_cart.css' %}">
 {% endblock %}
 
+
 {% block body %}
-лол
-{% for product in buyed_product_list %}
+<!-- {% for product in buyed_product_list %}
     <p>{{ product.name }} <a href="/shoping_cart/remove_{{ product.id }}">delete</a></p>
-{% endfor %}
+{% endfor %} -->
 
 <div class="container">
     {% for product in list_buyed_product %}
         <div class="row">
-            <div class="col photo">
+            <div class="col-md-auto checkpoint">
+                <input type="checkbox">
+            </div>
+            <div class="col-md-auto photo">
                 <img src="{{ product.photo.url }}" alt="">
             </div>
             
@@ -22,19 +25,33 @@
                 {{ product.name }}
             </div>
 
-            <div class="col quantity_filed">
-                <button class="minus">-</button>
-                <input type="text">
-                <button class="plus">+</button>
-            </div>
+            <!-- <div class="col quantity_filed"> -->
+                <div class="col-md-auto minus_btn">
+                    <button class="minus">-</button>
+                </div>
+                <div class="col-md-auto text_field">
+                    <input type="text">
+                </div>
+                <div class="col-md-auto plus_btn">
+                    <button class="plus">+</button>
+                </div>
+            <!-- </div> -->
 
             <div class="col price">
                 {{ product.price }} {{ product.currency}}
             </div>
+
+            <div class="col-md-auto delete_btn">
+                <button>x</button>
+            </div>
         </div>
-
-
     {% endfor %}
+
+    <div class="row total_container">
+        <div class="total">
+            Total Price: 42$
+        </div>
+    </div>
 </div>
 
 
