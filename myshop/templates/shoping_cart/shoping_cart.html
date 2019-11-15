@@ -3,6 +3,7 @@
 {% block head_css %}
 
 <link rel="stylesheet" href="{% static 'css/shoping_cart/shoping_cart.css' %}">
+<script src="{% static 'js/shoping_cart.js' %}"></script>
 {% endblock %}
 
 
@@ -42,7 +43,7 @@
             </div>
 
             <div class="col-md-auto delete_btn">
-                <button>x</button>
+                <button onclick="remove_items({{ product.id }})">x</button>
             </div>
         </div>
     {% endfor %}
