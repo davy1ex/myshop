@@ -3,9 +3,9 @@
     border-radius: 5px;
 }
 
-.container {
+/* .container {
     width: 70%;
-}
+} */
 
 .row:not(:last-child) {
     margin-bottom: 10px;
